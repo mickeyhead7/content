@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  content:
+    container_name: content-service
+    build:
+      context: ./applications/services/content
+    volumes:
+      - ./:/app
+    ports:
+      - 4001:4001
