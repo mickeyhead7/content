@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 import express from 'express';
 import viewEngine from '@app/lib/viewEngine';
 import routes from './routes';
-import themeResets from '@packages/web/themes/default/resets';
+import themeResets from '@packages/themes/default/resets';
 
 dotenv.config();
 

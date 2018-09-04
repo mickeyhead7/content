@@ -7,7 +7,7 @@
   "plugins": [
     ["module-resolver", {
       "alias": {
-        "@packages/web": "./src/packages/web/src",
+        "@packages": "./src/packages/src",
         "@app": "./src"
       }
     }]

@@ -1,10 +1,17 @@
 version: '3.7'
 services:
-  content:
-    container_name: content-service
+  services-content:
+    container_name: services-content
     build:
       context: ./applications/services/content
-    volumes:
-      - ./:/app
     ports:
-      - 4001:4001
+      - "4001:4001"
+    command: yarn start
+  web-content:
+    container_name: web-content
+    build:
+      context: ./applications/web/content
+    ports:
+      - "3001:3001"
+      - "8080:8080"
+    command: yarn start

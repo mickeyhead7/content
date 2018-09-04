@@ -8,4 +8,6 @@ RUN yarn install
 
 RUN yarn build
 
-EXPOSE 4001
+EXPOSE 3001
+
+EXPOSE 8080

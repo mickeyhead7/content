@@ -1,5 +1,5 @@
 import React from 'react';
-import DefaultLayout from '@packages/web/layouts/default';
+import DefaultLayout from '@packages/layouts/default';
 import EntryList from '@app/Components/EntryList';
 import { entries } from './fixtures';
 

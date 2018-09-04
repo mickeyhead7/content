@@ -22,9 +22,9 @@
     "lint": "yarn lint:scripts && yarn lint:styles",
     "lint:scripts": "eslint --fix --ext .js ./src",
     "lint:styles": "stylelint './src/**/*.scss' --fix",
-    "server": "node dist/app/index.js",
+    "server": "NODE_PORT=3001 node dist/app/index.js",
     "server:assets": "webpack-dev-server",
-    "server:development": "NODE_PRESERVE_SYMLINKS=1 NODE_ENV=development BABEL_ENV=server nodemon ./src/server/index.js --exec babel-node --e '.js,.jsx,.ts,.tsx'",
+    "server:development": "NODE_PRESERVE_SYMLINKS=1 NODE_PORT=3001 NODE_ENV=development BABEL_ENV=server nodemon ./src/server/index.js --exec babel-node --e '.js,.jsx,.ts,.tsx'",
     "start": "concurrently 'yarn server:development' 'yarn build:client:watch' 'yarn server:assets'",
     "test": "jest --config ./jest.config.js"
   },

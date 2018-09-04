@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PageHeader from '@packages/web/Components/PageHeader';
-import Table from '@packages/web/Components/Table';
-import TableHead from '@packages/web/Components/Table/Head';
-import TableBody from '@packages/web/Components/Table/Body';
-import TableRow from '@packages/web/Components/Table/Row';
-import TableCell from '@packages/web/Components/Table/Cell';
-import TableCellHead from '@packages/web/Components/Table/CellHead';
-import Checkbox from '@packages/web/Components/Input/Checkbox';
+import PageHeader from '@packages/Components/PageHeader';
+import Table from '@packages/Components/Table';
+import TableHead from '@packages/Components/Table/Head';
+import TableBody from '@packages/Components/Table/Body';
+import TableRow from '@packages/Components/Table/Row';
+import TableCell from '@packages/Components/Table/Cell';
+import TableCellHead from '@packages/Components/Table/CellHead';
+import Checkbox from '@packages/Components/Input/Checkbox';
 
 const EntryList = ({ entries }) => (
   <main>
