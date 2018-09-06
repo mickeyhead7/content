@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+  services-content:
+    container_name: services-content
+    build:
+      context: ./services/content
+    volumes:
+      - services-content-sync:/app:nocopy
+      - app/node_modules
+    ports:
+      - "4001:4001"
+    command: yarn start
+  applications-web:
+    container_name: applications-web
+    build:
+      context: ./applications/web
+    volumes:
+      - applications-web-sync:/app:nocopy
+      - app/node_modules
+    ports:
+      - "3001:3001"
+      - "8080:8080"
+    command: yarn start
+volumes:
+  services-content-sync:
+    external: true
+  applications-web-sync:
+    external: true

@@ -1,0 +1,20 @@
+version: '2'
+syncs:
+  services-content-sync:
+    src: ./services/content
+    sync_excludes:
+      - '.gitignore'
+      - '.git'
+      - 'node_modules'
+    watch_excludes:
+      - '.*/.git'
+      - '.*/node_modules'
+  applications-web-sync:
+    src: ./applications/web
+    sync_excludes:
+      - '.gitignore'
+      - '.git'
+      - 'node_modules'
+    watch_excludes:
+      - '.*/.git'
+      - '.*/node_modules'
