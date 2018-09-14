@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import * as defaultStyles from '@packages/themes/default/Components/Table';
 
 const StyledCell = styled.td`
-${props => props.asNumber ? props.styles.CellAsNumber : props.styles.Cell}
+  ${props => props.asNumber ? props.styles.CellAsNumber : props.styles.Cell}
 `;
 
 const Cell = ({ asNumber, children, styles }) => (

@@ -1,4 +1,4 @@
-import { pallette, spacing } from '@packages/themes/default/settings';
+import { pallette } from '@packages/themes/default/settings';
 
 export const Body = `
   background-color: ${pallette.white};
@@ -8,6 +8,7 @@ export const Body = `
 `;
 
 export const Content = `
+  display: flex;
+  flex-direction: row;
   flex-grow: 1;
-  padding: ${spacing.spacious};
 `;

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import PageHeader from '@packages/Components/PageHeader';
 import Table from '@packages/Components/Table';
 import TableHead from '@packages/Components/Table/Head';
@@ -8,11 +9,31 @@ import TableRow from '@packages/Components/Table/Row';
 import TableCell from '@packages/Components/Table/Cell';
 import TableCellHead from '@packages/Components/Table/CellHead';
 import Checkbox from '@packages/Components/Input/Checkbox';
+import Typography from '@packages/Components/Typography';
+import { spacing } from '@packages/themes/default/settings';
+
+const Container = styled.main`
+  display: flex;
+  width: 100%;
+`;
+
+const Content = styled.section`
+  flex-grow: 1;
+  max-height: 100%;
+  overflow-y: auto;
+  padding: ${spacing.spacious};
+`;
+
+const Menu = styled.section`
+  background: #fafafa;
+  border-left: 1px solid #ccc;
+  padding: ${spacing.spacious};
+`;
 
 const EntryList = ({ entries }) => (
-  <main>
-    <PageHeader title="Entries" />
-    <section>
+  <Container>
+    <Content>
+      <PageHeader title="Entries" />
       <Table>
         <TableHead>
           <TableRow>
@@ -45,8 +66,13 @@ const EntryList = ({ entries }) => (
           ))}
         </TableBody>
       </Table>
-    </section>
-  </main>
+    </Content>
+    <Menu>
+      <Typography element="h2">
+        Content type
+      </Typography>
+    </Menu>
+  </Container>
 );
 
 EntryList.propTypes = {
